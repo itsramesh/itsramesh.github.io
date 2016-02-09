@@ -1,0 +1,41 @@
+<div id="wrapper" ng-class="{'toggled' : vm.toggleThis}">
+
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+        <div class="list-group">
+            <a
+                    class="list-group-item list-group-item-primary"
+                    data-toggle="collapse"
+                    data-target="#dataStructuresLearning"
+                    aria-expanded="false"
+                    aria-controls="dataStructuresLearning">
+                Data Structures
+            </a>
+            <ul class="list-group collapse" id="dataStructuresLearning">
+                <li class="list-group-item">Introduction</li>
+                <li class="list-group-item">Data Types</li>
+            </ul>
+
+        </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="only-small-screen breadcrumb">
+                        <li ng-click="vm.toggleThis = vm.toggleThis?false:true"
+                            class="cursor-pointer text-center"
+                            aria-hidden="true"><i class="glyphicon glyphicon-menu-hamburger"></i> {{vm.toggleThis ? 'Hide' : 'Show'}} Side bar</li>
+                    </ul>
+                    <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
+                    <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+</div>
