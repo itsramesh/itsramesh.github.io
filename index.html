@@ -4,18 +4,41 @@
     <title>Its Ramesh</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    <link type='text/css' rel="stylesheet" href='styles/utils.css'>
     <link type='text/css' rel="stylesheet" href='styles/styles.css'>
+    <link type='text/css' rel="stylesheet" href='styles/responsive.css'>
 </head>
 <body class="landing-page">
 <div class="intro-page full-height">
-    <div class="introduction-text">
-        <h1 class="font-bold">
-            HELLO, I'M RAMESHKUMAR ARUMUGAM
-        </h1>
+    <button class="menu-icon" onclick="toggleMenu(event)">
+        <span class="lines"></span>
+    </button>
+    <div id="menu-list" class="menu-list show-menu">
+        <ul class="nav list-no-style">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">BLOG</a></li>
+            <li><a href="#">RESUME</a></li>
+            <li><a href="#">PORTFOLIO</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+    </div>
+    <section id="home" class="fill">
+        <div class="introduction-text text-center">
+            <h1 class="font-bold">
+                HELLO, I'M RAMESHKUMAR ARUMUGAM
+            </h1>
         <span>
             I have around 4 years of experience in Web Technologies
         </span>
-    </div>
+        </div>
+        <div class="down-arrow">
+            <a href="#about">
+                <span class="arrow-down">&#9660</span>
+            </a>
+        </div>
+    </section>
 </div>
+<script type="javascript" src="scripts/scripts.js"></script>
 </body>
 </html>

@@ -1,0 +1,19 @@
+@media (min-width: 768px) {
+    .show-menu{
+        top: 30px;
+        left: 80px;
+    }
+    .nav {
+        padding: 0 15px;
+    }
+    .nav li {
+        display: inline-block;
+        height: 50px;
+        line-height: 50px;
+    }
+}
+@media (max-width: 767px) {
+    .nav li {
+        padding: 15px;
+    }
+}
