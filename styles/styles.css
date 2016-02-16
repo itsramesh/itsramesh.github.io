@@ -1,0 +1,36 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=PT+Sans);
+
+html, body {
+    height: 100%; }
+
+.full-height {
+    height: 100%; }
+
+h1 {
+    font-size: 28px; }
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    h1 {
+        font-size: 36px; }  }
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    h1 {
+        font-size: 48px; } }
+
+body {
+    font-family: 'PT Sans', sans-serif; }
+
+.landing-page {
+    background: url("images/bg-pattern-1.png"); }
+
+.introduction-text {
+    position: relative;
+    top: 45%;
+    padding: 0 30px;
+    text-align: center; }
+.introduction-text span {
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 1px; }
