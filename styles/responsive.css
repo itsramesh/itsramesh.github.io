@@ -1,6 +1,9 @@
 @media (min-width: 768px) {
-    .show-menu{
+    .menu-list{
         top: 30px;
+        left: 100px;
+    }
+    .show-menu{
         left: 80px;
     }
     .nav {
@@ -15,5 +18,12 @@
 @media (max-width: 767px) {
     .nav li {
         padding: 15px;
+    }
+    .menu-list{
+         top: 100px;
+         left: 30px;
+     }
+    .show-menu{
+        top: 80px;
     }
 }

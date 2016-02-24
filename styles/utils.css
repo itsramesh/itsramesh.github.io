@@ -9,6 +9,10 @@ body {
     font-family: 'PT Sans', sans-serif;
 }
 
+section {
+    display: block;
+}
+
 a {
     text-decoration: none;
 }
