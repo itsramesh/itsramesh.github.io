@@ -103,6 +103,35 @@ window.blossom = function () {
         }
     };
 
+    Blossom.prototype.scrollTo = function (duration) {
+        var bodyElement = document.body, to;
+
+        this.each(function (element) {
+            to = element.offsetTop;
+        });
+
+        function scrollFunction (to, duration) {
+            if (duration < 0) return;
+            var difference = to - bodyElement.scrollTop;
+            var perTick = difference / duration * 10;
+            var scrollTop = bodyElement.scrollTop;
+            if (difference >= 0) {
+                setTimeout(function () {
+                    bodyElement.scrollTop = scrollTop + perTick;
+                    if (bodyElement.scrollTop === to) return;
+                    scrollFunction(to, duration - 10);
+                }, 10);
+            } else {
+                setTimeout(function () {
+                    bodyElement.scrollTop = scrollTop + perTick;
+                    if (bodyElement.scrollTop <= to) return;
+                    scrollFunction(to, duration - 10);
+                }, 10)
+            }
+        }
+        scrollFunction(to, duration);
+    };
+
     Blossom.prototype.append = function (elements) {
         return this.each(function (parentElement, i) {
             elements.each(function (childElement) {

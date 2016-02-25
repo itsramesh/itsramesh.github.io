@@ -33,7 +33,7 @@
 .toggle-close .lines {
     background: 0 0;
 }
-.lines::after, .lines::before {
+.lines::after, .lines::before, h2::before {
     content: '';
 }
 .toggle-close .lines::after, .toggle-close .lines::before {
@@ -143,3 +143,31 @@
     -webkit-font-smoothing: antialiased;
 }
 
+.about {
+    padding: 100px 0;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;;
+    margin-left: auto;
+}
+
+.container:before, .container:after {
+    display: table;
+    content: " ";
+}
+
+.container:after{
+    clear: both;
+}
+.section-title {
+    position: relative;
+    margin-bottom: 50px;
+    padding-left: 23px;
+}
+.section-title p {
+    margin: 0;
+    text-align: left;
+}
