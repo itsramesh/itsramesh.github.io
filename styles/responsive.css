@@ -55,6 +55,10 @@
     .contact-info {
         margin-bottom: 70px;
     }
+    .parallax-home {
+        background-attachment: scroll;
+        background-position: top center !important;
+    }
 }
 @media (min-width: 768px) {
     .menu-list{
