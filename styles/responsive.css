@@ -1,4 +1,4 @@
-@media (max-width: 767px) {
+@media  only screen and (max-width: 767px) {
     .nav li {
         padding: 15px;
     }
@@ -59,8 +59,24 @@
         background-attachment: scroll;
         background-position: top center !important;
     }
+    .about-content div {
+        padding: 0;
+    }
+    .about-content div::before {
+        position: absolute;
+        content: '';
+        top: -20px;
+        right: -20px;
+        bottom: -20px;
+        left: -20px;
+        z-index: -1;
+        background: #f5f5f5;
+    }
+    .skill-box {
+        border-bottom: 1px solid #dcdcdc;
+    }
 }
-@media (min-width: 768px) {
+@media  only screen and (min-width: 768px) {
     .menu-list{
         top: 30px;
         left: 100px;
@@ -122,8 +138,11 @@
     .contact-info {
         padding-left: 25px;
     }
+    .about-content div {
+        background: #f5f5f5;
+    }
 }
-@media (min-width: 992px) {
+@media  only screen and (min-width: 992px) {
     .container {
         width: 970px;
     }
@@ -167,14 +186,26 @@
     .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9 {
         float: left;
     }
-    .about-image {
-        margin-bottom: 50px;
-    }
     .contact-info ul li {
         padding: 15px 0;
     }
+    .about-content {
+         padding-left: 25px;
+     }
+    .contact-info {
+        padding-right: 25px;
+    }
+    .skill-box {
+        border-right: 1px solid #dcdcdc;
+    }
 }
-@media (min-width: 1200px) {
+@media only screen and (max-width: 991px) {
+
+    .about-image {
+        margin-bottom: 50px;
+    }
+}
+@media  only screen and (min-width: 1200px) {
     .container {
         width: 1170px;
     }
@@ -230,5 +261,11 @@
     }
     .contact-info ul li:first-child {
         padding-top: 15px;
+    }
+    .skill-box:nth-child(odd) {
+        border-right: 1px solid #dcdcdc;
+    }
+    .skill-box:nth-child(-n+2) {
+        border-bottom: 1px solid #dcdcdc;
     }
 }
