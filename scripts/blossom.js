@@ -103,33 +103,28 @@ window.blossom = function () {
         }
     };
 
-    Blossom.prototype.scrollTo = function (duration) {
-        var bodyElement = document.body, to;
+    Blossom.prototype.scrollTo = function (from, duration) {
+        var to;
 
         this.each(function (element) {
             to = element.offsetTop;
         });
 
-        function scrollFunction (to, duration) {
-            if (duration < 0) return;
-            var difference = to - bodyElement.scrollTop;
-            var perTick = difference / duration * 10;
-            var scrollTop = bodyElement.scrollTop;
-            if (difference >= 0) {
-                setTimeout(function () {
-                    bodyElement.scrollTop = scrollTop + perTick;
-                    if (bodyElement.scrollTop === to) return;
-                    scrollFunction(to, duration - 10);
-                }, 10);
-            } else {
-                setTimeout(function () {
-                    bodyElement.scrollTop = scrollTop + perTick;
-                    if (bodyElement.scrollTop <= to) return;
-                    scrollFunction(to, duration - 10);
-                }, 10)
-            }
+        function animate(style,unit,from,to,time,prop) {
+            var start = new Date().getTime(),
+                timer = setInterval(function() {
+                    var step = Math.min(1,(new Date().getTime()-start)/time);
+                    if (prop) {
+                        document.body[style] = (from+step*(to-from))+unit;
+                    } else {
+                        document.body.style[style] = (from+step*(to-from))+unit;
+                    }
+                    if( step == 1) clearInterval(timer);
+                },25);
+            document.body.style[style] = from+unit;
         }
-        scrollFunction(to, duration);
+
+        animate("scrollTop", "", from, to, duration, true);
     };
 
     Blossom.prototype.append = function (elements) {

@@ -75,6 +75,22 @@
     .skill-box {
         border-bottom: 1px solid #dcdcdc;
     }
+    .resume-box div:first-child {
+        margin-bottom: 20px;
+        padding: 20px;
+    }
+    .resume-box div:last-child {
+        text-align: right;
+    }
+    .resume-box p {
+        text-align: left;
+    }
+    .comment-input, .input-style, .text-style {
+        width: 100%;
+    }
+    .text-style {
+        margin-top: 30px;
+    }
 }
 @media  only screen and (min-width: 768px) {
     .menu-list{
@@ -141,6 +157,29 @@
     .about-content div {
         background: #f5f5f5;
     }
+    .resume-box div:first-child {
+        width: 180px;
+    }
+    .resume-box div:last-child {
+        top: 0;
+        left: 200px;
+    }
+    .resume-box div:last-child, .resume-box i {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+    .input-style {
+        float: left;
+        width: 50%;
+        margin-bottom: 30px;
+        padding-right: 25px;
+    }
+    .text-style {
+        float: right;
+        width: 50%;
+        padding-left: 25px;
+    }
 }
 @media  only screen and (min-width: 992px) {
     .container {
@@ -192,7 +231,7 @@
     .about-content {
          padding-left: 25px;
      }
-    .contact-info {
+    .contact-info, .education-content {
         padding-right: 25px;
     }
     .skill-box {
@@ -203,6 +242,12 @@
 
     .about-image {
         margin-bottom: 50px;
+    }
+    .education-content {
+        margin-bottom: 30px;
+    }
+    #map-canvas {
+        height: 300px;
     }
 }
 @media  only screen and (min-width: 1200px) {

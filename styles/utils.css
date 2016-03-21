@@ -21,7 +21,7 @@ body {
     box-sizing: border-box;
 }
 
-section {
+section, footer {
     display: block;
 }
 
@@ -116,6 +116,20 @@ p {
     min-height: 1px;
     padding-right: 15px;
     padding-left: 15px;
+}
+input, textarea {
+    border: none;
+    outline: 0;
+}
+button, html input[type=button], input[type=reset], input[type=submit] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    line-height: inherit;
 }
 
 @media (min-width: 768px) {

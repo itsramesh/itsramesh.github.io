@@ -5,8 +5,8 @@ function toggleMenu () {
     toggleMenu.hasClass('toggle-close') ? toggleMenu.removeClass('toggle-close') : toggleMenu.addClass('toggle-close');
 }
 
-function smoothScroll(id) {
-    blossom.get('#'+id).scrollTo(600);
+function smoothScroll(event, id) {
+    blossom.get('#'+id).scrollTo(event.layerY, 300);
 }
 
 blossom.get('#toggle-menu').on('click', toggleMenu);
@@ -30,3 +30,10 @@ blossom.get('#toggle-menu').on('click', toggleMenu);
 
 })();
 
+function initMap() {
+    var mapDiv = document.getElementById('map-canvas');
+    var map = new google.maps.Map(mapDiv, {
+        center: {lat: 12.9542946, lng: 77.4908521},
+        zoom: 11
+    });
+}

@@ -15,12 +15,12 @@
 </button>
 <div id="menu-list" class="menu-list">
     <ul class="nav list-no-style">
-        <li><a href="#" onclick="smoothScroll('home')">HOME</a></li>
-        <li><a href="#" onclick="smoothScroll('about')">ABOUT</a></li>
-        <li><a href="#">BLOG</a></li>
-        <li><a href="#">RESUME</a></li>
-        <li><a href="#">PORTFOLIO</a></li>
-        <li><a href="#">CONTACT</a></li>
+        <li><a onclick="smoothScroll(event, 'home')">HOME</a></li>
+        <li><a onclick="smoothScroll(event, 'about')">ABOUT</a></li>
+        <li><a >BLOG</a></li>
+        <li><a onclick="smoothScroll(event, 'resume')">RESUME</a></li>
+        <li><a>PORTFOLIO</a></li>
+        <li><a onclick="smoothScroll(event, 'contact')">CONTACT</a></li>
     </ul>
 </div>
 <section id="home" class="parallax parallax-home fill">
@@ -30,11 +30,11 @@
                 HELLO, I'M RAMESHKUMAR ARUMUGAM
             </h1>
         <span>
-            I have around 4 years of experience in Web Technologies
+           I have around 4 years of experience in Web Technologies
         </span>
         </div>
-        <div class="down-arrow">
-            <a href="#"  onclick="smoothScroll('about')">
+        <div class="down-arrow cursor-pointer">
+            <a class="cursor-pointer" onclick="smoothScroll(event, 'about')">
                 <span class="arrow-down">&#9660</span>
             </a>
         </div>
@@ -45,7 +45,7 @@
         <div class="container">
             <div class="section-title">
                 <h2>About Me</h2>
-                <p>I'm a web developer</p>
+                <p>A front-end developer from Bengaluru, India who loves the internet sphere. </p>
             </div>
             <div class="row">
                 <div class="about-wrapper">
@@ -83,8 +83,13 @@
                     <div class="col-xs-12 col-sm-12 col-md-6 about-content">
                         <div>
                             <h3>Rameshkumar Arumugam</h3>
-                            <span>Entrepreneur / Web Developer</span>
-                            <p>Experience in design and development in HTML5, CSS3, JavaScript, JQuery, AngularJs, NodeJs (Express), PHP (CodeIgniter, Laravel), MySQL, MongoDB and have sound knowledge in Creative Designs and Object Oriented Programming Concepts.</p>
+                            <span>Web Developer</span>
+                            <p>
+                                I have over four years of experience, and have been part of design and development projects.
+                            </p>
+                            <p>
+                                I specialize in standards-based HTML5, CSS3, JavaScript (JQuery, AngularJs, NodeJs) web development.
+                            </p>
                             <ul>
                                 <li>
                                     <a target="_blank" href="https://www.facebook.com/itsramesh20"><i class="fa fa-facebook"></i></a>
@@ -113,36 +118,165 @@
     <div class="container">
         <div class="skills-background">
             <div class="row">
-                <!-- Skill box 1 -->
                 <div class="col-xs-12 col-sm-6 col-md-3 skill-box">
                     <i class="fa fa-html5"></i>
-                    <span>80 %</span>
-                    <h4>HTML &amp; CSS3</h4>
+                    <span>95 %</span>
+                    <h4>HTML5</h4>
                 </div>
-                <!-- Skill box 2 -->
+                <div class="col-xs-12 col-sm-6 col-md-3 skill-box">
+                    <i class="fa fa-css3"></i>
+                    <span>95 %</span>
+                    <h4>CSS3</h4>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 skill-box">
+                    <i class="fa fa-css3"></i>
+                    <span>90 %</span>
+                    <h4>SASS / SCSS</h4>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 skill-box">
+                    <i class="fa fa-css3"></i>
+                    <span>100 %</span>
+                    <h4>Bootstrap</h4>
+                </div>
+            </div>
+        </div>
+        <div class="skills-background">
+            <div class="row">
                 <div class="col-xs-12 col-sm-6 col-md-3 skill-box">
                     <i class="fa fa-code"></i>
                     <span>90 %</span>
-                    <h4>Javascript</h4>
-                </div>
-                <!-- Skill box 3 -->
-                <div class="col-xs-12 col-sm-6 col-md-3 skill-box">
-                    <i class="fa fa-code"></i>
-                    <span>100 %</span>
                     <h4>Angular 1.x</h4>
                 </div>
-                <!-- Skill box 4 -->
                 <div class="col-xs-12 col-sm-6 col-md-3 skill-box">
                     <i class="fa fa-code"></i>
-                    <span>80 %</span>
-                    <h4>Node.JS</h4>
+                    <span>70 %</span>
+                    <h4>Angular 2.x</h4>
                 </div>
-                <!-- end Skill box 4 -->
-            </div><!-- end row -->
+                <div class="col-xs-12 col-sm-6 col-md-3 skill-box">
+                    <i class="fa fa-code"></i>
+                    <span>70 %</span>
+                    <h4>Node.Js</h4>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 skill-box">
+                    <i class="fa fa-code"></i>
+                    <span>70 %</span>
+                    <h4>PHP</h4>
+                </div>
+            </div>
         </div>
-    </div><!-- end container -->
+    </div>
 </section>
+<section id="resume">
+    <div class="resume-background">
+        <div class="container">
+            <div class="section-title">
+                <h2>Resume</h2>
+                <p> I’m a front-end developer from India. I’m currently a Software Engineer NextGen Healthcare (QSIH Pvt Limited).</p>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-6 education-content">
+                    <!-- Education box 1 -->
+                    <div class="resume-box">
+                        <div>
+                            <h3>Anna University</h3>
+                            <span>2008-2012</span>
+                        </div>
+                        <div>
+                            <p>I hold a B.E Computer Science & Engineering from Sengunthar Engineering College (Anna University) with 85.9% (Distinction).</p>
+                            <i class="fa fa-graduation-cap"></i>
+                        </div>
+                    </div>
+                    <!-- end Education box 3 -->
+                </div>
+                <div class="col-xs-12 col-md-6 employment-content">
+                    <!-- Employment box 1 -->
+                    <div class="resume-box">
+                        <div>
+                            <h3>QSIH Pvt LTD</h3>
+                            <span>2014-till</span>
+                        </div>
+                        <div>
+                            <p>I'm working as a javascript developer in QSIH.</p>
+                            <i class="fa fa-briefcase"></i>
+                        </div>
+                    </div>
+                    <!-- Employment box 2 -->
+                    <div class="resume-box">
+                        <div>
+                            <h3>Genius Systems</h3>
+                            <span>2012-2014</span>
+                        </div>
+                        <div>
+                            <p>I have worked as software developer in various web technologies (JS, PHP, Node.Js) and Mobile development.</p>
+                            <i class="fa fa-briefcase"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="contact">
+    <div class="contact-background">
+        <div class="container">
+            <div class="contact-form">
+                <div class="section-title">
+                    <h2>Get In Touch</h2>
+                    <p>If you would like to submit a quotation please use this below.</p>
+                </div>
+                <form method="post" id="contactform">
+                    <div class="input-style">
+                        <div>
+                            <input type="text" id="name" name="name" placeholder="Name">
+                        </div>
+                        <div>
+                            <input type="email" id="email" name="email" placeholder="E-Mail">
+                        </div>
+                        <div>
+                            <input type="text" id="phone" name="phone" placeholder="Phone">
+                        </div>
+                    </div>
+                    <div class="text-style">
+                        <textarea name="message" id="message" placeholder="Message"></textarea>
+                        <input type="submit" id="submit" class="submit-style" name="submit" value="Send Message">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="google-maps">
+        <div id="map-canvas"></div>
+    </div>
+</section>
+<footer>
+    <div class="footer-background">
+        <div class="container">
+            <div>
+                <p>Fiction is like a spider's web, attached ever so slightly perhaps, but still attached to life at all four corners. Often the attachment is scarcely perceptible.</p>
+            </div>
+            <div>
+                <ul>
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/itsramesh20"><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://twitter.com/crimsonramesh"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://in.linkedin.com/in/crimsonramesh"><i class="fa fa-linkedin"></i></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://plus.google.com/u/0/+RameshKumarAnnu/posts"><i class="fa fa-google-plus"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
 <script src="scripts/blossom.js"></script>
 <script src="scripts/scripts.js"></script>
+
+<script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+        async defer></script>
 </body>
 </html>
